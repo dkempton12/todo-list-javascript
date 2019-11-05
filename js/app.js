@@ -16,5 +16,10 @@ var todoList = {
   changeTodo: function(position, todoText) {
     this.todos[position].todoText = todoText;
     this.displayTodos();
-  }
+  },
+
+  deleteTodo: function(position) {
+    this.todos.splice(position, 1);
+    this.displayTodos();
+  },
 };
