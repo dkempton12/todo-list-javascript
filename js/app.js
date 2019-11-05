@@ -11,5 +11,10 @@ var todoList = {
       completed: false
     });
     this.displayTodos();
+  },
+
+  changeTodo: function(position, todoText) {
+    this.todos[position].todoText = todoText;
+    this.displayTodos();
   }
 };
