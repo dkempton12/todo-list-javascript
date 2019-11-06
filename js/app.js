@@ -2,7 +2,12 @@ var todoList = {
   todos: [],
 
   displayTodos: function() {
-    console.log('My To-Dos:', this.todos);
+    // Let user know if todo list is empty
+    if (this.todos.length === 0) {
+      console.log('Your todo list is empty!');
+    } else {
+      
+    }
   },
 
   addTodo: function(todoText) {
