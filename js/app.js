@@ -11,7 +11,7 @@ var todoList = {
         // Display todos as completed
         if (this.todos[i].completed === true) {
           console.log('(x)', this.todos[i].todoText);
-          // Otherwise, display todos as incomplete 
+          // Otherwise, display todos as incomplete
         } else {
           console.log('()', this.todos[i].todoText);
         }
@@ -40,6 +40,27 @@ var todoList = {
   toggleCompleted: function(position) {
     var todo = this.todos[position];
     todo.completed = !todo.completed;
+    this.displayTodos();
+  },
+
+  toggleAll: function() {
+    var totalTodos = this.todos.length;
+    var completedTodos = 0;
+    // Increment number of completed todos as they're completed
+    for (var i=0; i < totalTodos; i++) {
+      if (this.todos[i].completed === true) {
+        completedTodos++;
+      }
+      // If all items are completed, make them incomplete
+      if (completedTodos === totalTodos) {
+        this,todos[i].completed = false;
+        // Otherwise, toggle all items back to true
+      } else {
+        for (var i=0; i < totalTodos; i++) {
+          this,todos[i].completed = true;
+        }
+      }
+    }
     this.displayTodos();
   }
 };
