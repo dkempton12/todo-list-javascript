@@ -6,7 +6,16 @@ var todoList = {
     if (this.todos.length === 0) {
       console.log('Your todo list is empty!');
     } else {
-      
+      console.log('My todos');
+      for (var i=0; i < this.todos.length; i++) {
+        // Display todos as completed
+        if (this.todos[i].completed === true) {
+          console.log('(x)', this.todos[i].todoText);
+          // Otherwise, display todos as incomplete 
+        } else {
+          console.log('()', this.todos[i].todoText);
+        }
+      }
     }
   },
 
