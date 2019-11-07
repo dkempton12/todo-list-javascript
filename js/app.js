@@ -53,14 +53,25 @@ var todoList = {
       }
       // If all items are completed, make them incomplete
       if (completedTodos === totalTodos) {
-        this,todos[i].completed = false;
+        this.todos[i].completed = false;
         // Otherwise, toggle all items back to true
       } else {
         for (var i=0; i < totalTodos; i++) {
-          this,todos[i].completed = true;
+          this.todos[i].completed = true;
         }
       }
     }
     this.displayTodos();
   }
 };
+
+var displayTodosButton = document.getElementById('displayTodosButton');
+var toggleAllButton = document.getElementById('toggleAllButton');
+
+displayTodosButton.addEventListener('click', function(){
+  todoList.displayTodos();
+});
+
+toggleAllButton.addEventListener('click', function(){
+  todoList.toggleAll();
+});
