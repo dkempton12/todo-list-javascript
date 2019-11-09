@@ -10,7 +10,7 @@
 <body>
 <div class="container">
   <h1 class="main-heading">To-Do List</h1>
-  
+
   <div class="handlers">
     <button class="button" onclick="handlers.displayTodos()">Display To-Dos</button>
     <button class="button" onclick="handlers.toggleAll()">Toggle All Items</button>
@@ -22,18 +22,18 @@
   </div>
 
   <div class="handlers">
-    <input id="changeTodoPositionInput" type="text">
+    <input id="changeTodoPositionInput" type="number">
     <input id="changeTodoTextInput" type="text">
     <button class="button" onclick="handlers.changeTodo()">Change</button>
   </div>
 
   <div class="handlers">
-    <input id="deleteTodoPositionInput" type="text">
+    <input id="deleteTodoPositionInput" type="number">
     <button class="button" onclick="handlers.deleteTodo()">Delete</button>
   </div>
 
   <div class="handlers">
-    <input id="toggleCompletedPositionInput" type="text">
+    <input id="toggleCompletedPositionInput" type="number">
     <button class="button" onclick="handlers.toggleCompleted()">Toggle Completed</button>
   </div>
 </div>
