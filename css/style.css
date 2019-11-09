@@ -30,6 +30,10 @@ body {
   color: #4CBB17;
 }
 
+.handlers {
+  margin-bottom: 30px;
+}
+
 .button {
   margin: 0;
   padding: 3px 8px;
