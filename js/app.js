@@ -65,13 +65,39 @@ var todoList = {
   }
 };
 
-var displayTodosButton = document.getElementById('displayTodosButton');
-var toggleAllButton = document.getElementById('toggleAllButton');
+// This object will now handle clicks, replacing the event listeners
+var handlers = {
+  displayTodos: function() {
+    todoList.displayTodos();
+  },
 
-displayTodosButton.addEventListener('click', function(){
-  todoList.displayTodos();
-});
+  addTodo: function() {
+    var addTodoTextInput = document.getElementById('addTodoTextInput');
+    todoList.addTodo(addTodoTextInput.value);
+    addTodoTextInput.value = '';
+  },
 
-toggleAllButton.addEventListener('click', function(){
-  todoList.toggleAll();
-});
+  changeTodo: function() {
+    var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+    var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+    todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
+    changeTodoPositionInput.value= '';
+    changeTodoTextInput.value= '';
+  },
+
+  deleteTodo: function() {
+    var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+    todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+    deleteTodoPositionInput.value = '';
+  },
+
+  toggleCompleted: function() {
+    var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
+    todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
+    toggleCompletedPositionInput.value = '';
+  },
+
+  toggleAll: function() {
+    todoList.toggleAll();
+  }
+};
