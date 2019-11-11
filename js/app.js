@@ -101,3 +101,9 @@ var handlers = {
     todoList.toggleAll();
   }
 };
+
+var view = {
+  displayTodos: function() {
+
+  }
+};
