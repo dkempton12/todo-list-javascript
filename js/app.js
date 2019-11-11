@@ -119,6 +119,11 @@ var view = {
       } else {
         todoTextWithCompletion = '( )' + ' ' + todo.todoText;
       }
+      // setting each <li> textContent property to the todoTextWithCompletion variable
+      todoLi.textContent = todoTextWithCompletion;
+
+      // Appending todo items
+      todosUl.appendChild(todoLi);
     }
 
   }
