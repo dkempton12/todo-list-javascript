@@ -104,6 +104,16 @@ var handlers = {
 
 var view = {
   displayTodos: function() {
+    // Grab reference to the <ul>
+    var todosUl = document.querySelector('ul');
+    // Clear the todos <ul> as items are added
+    todosUl.innerHTML = '';
+
+    for (var i=0; i < todoList.todos.length; i++) {
+      var todoLi = document.createElement('li');
+      var todo = todoList.todos[i];
+      var todoTextWithCompletion = '';
+    }
 
   }
 };
