@@ -50,3 +50,7 @@ body {
 .button:last-of-type {
   margin-left: 3px;
 }
+
+ul {
+  list-style-type: none;
+}
