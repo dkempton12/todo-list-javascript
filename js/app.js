@@ -113,6 +113,12 @@ var view = {
       var todoLi = document.createElement('li');
       var todo = todoList.todos[i];
       var todoTextWithCompletion = '';
+
+      if (todo.completed === true) {
+        todoTextWithCompletion = '(x)' + ' ' + todo.todoText;
+      } else {
+        todoTextWithCompletion = '( )' + ' ' + todo.todoText;
+      }
     }
 
   }
