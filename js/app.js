@@ -98,12 +98,23 @@ var view = {
       } else {
         todoTextWithCompletion = '( )' + ' ' + todo.todoText;
       }
+
+      // setting the todoLi id property to i, i being the indexed position
+      todoLi.id = i;
+
+
       // setting each <li> textContent property to the todoTextWithCompletion variable
       todoLi.textContent = todoTextWithCompletion;
+
+      // Appending deleteTodo buttons
+      todoLi.appendChild(this.createDeleteButton());
 
       // Appending todo items
       todosUl.appendChild(todoLi);
     }
+  },
 
+  createDeleteButton: function() {
+    
   }
 };
