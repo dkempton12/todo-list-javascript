@@ -131,9 +131,12 @@ var view = {
       var elementClicked = event.target;
       // Grabbing the indexed id position, and using the parseInt method to convert the string into the index number,
       // which is passed into handlers.deleteTodo
-      if (elementClicked.className === deleteButton) {
+      if (elementClicked.className === 'deleteButton') {
         handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
       }
     });
   }
 };
+
+// this runs the event listeners code
+view.setUpEventListeners();
