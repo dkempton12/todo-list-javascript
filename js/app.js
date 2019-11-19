@@ -125,7 +125,15 @@ var view = {
     var todosUl = document.querySelector('ul');
 
     todosUl.addEventListener('click', function(event) {
-      
+      console.log(event.target.parentNode.id);
+
+      // get the element that was clicked on
+      var elementClicked = event.target;
+      // Grabbing the indexed id position, and using the parseInt method to convert the string into the index number,
+      // which is passed into handlers.deleteTodo
+      if (elementClicked.className === deleteButton) {
+        handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+      }
     });
   }
 };
